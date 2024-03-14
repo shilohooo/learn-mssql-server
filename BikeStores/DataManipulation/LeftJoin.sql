@@ -1,9 +1,10 @@
--- SQL Server 数据操作之连表操作 left Join - 左联接，也称为左外联接
+-- SQL Server 数据操作之连表操作 left Join - 左联接
 -- 参考资料：https://www.sqlservertutorial.net/sql-server-basics/sql-server-left-join/
 -- left join 是查询语句的一个子句，它可以从多个表中获取数据
--- left join 返回左表的所有行和右表的匹配行，对应右表中未匹配的行，它所对应的列的值是 NULL
+-- left join 返回左表的所有行和右表的匹配行，对于右表中未匹配的行，它所对应的列的值是 NULL
 -- 语法：select select_list from table1 left join table2 on join_predicate
 -- 上述语法中，左表是 table1，右表是 table2
+-- left join（左联接）和 left outer join（左外联接）是一样的，outer 关键字是可选的
 
 use BikeStores;
 -- 以下查询将使用 products、order_items 表的数据作为示例
