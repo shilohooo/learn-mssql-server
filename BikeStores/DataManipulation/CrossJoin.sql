@@ -21,16 +21,19 @@ select s.store_id,
        isnull(c.sales, 0) as sales
 from sales.stores s
          cross join production.products p
-         left join (select s.store_id,
-                           p.product_id,
-                           sum(i.quantity * i.list_price) sales
-                    from sales.orders o
-                             inner join sales.order_items i on o.order_id = i.order_id
-                             inner join sales.stores s on o.store_id = s.store_id
-                             inner join production.products p on i.product_id = p.product_id
-                    group by s.store_id,
-                             p.product_id) c on c.store_id = s.store_id
+         left join (
+    --          利用子查询查出产品的销售额
+    select s.store_id,
+           p.product_id,
+           sum(i.quantity * i.list_price) sales
+    from sales.orders o
+             inner join sales.order_items i on o.order_id = i.order_id
+             inner join sales.stores s on o.store_id = s.store_id
+             inner join production.products p on i.product_id = p.product_id
+    group by s.store_id,
+             p.product_id) c on c.store_id = s.store_id
     and c.product_id = p.product_id
+-- 过滤掉有销售额的产品信息
 where c.sales is null
 order by p.product_id,
          s.store_id;
