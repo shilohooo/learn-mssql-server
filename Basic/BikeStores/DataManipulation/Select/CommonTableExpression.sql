@@ -1,4 +1,5 @@
 -- SQL Server 数据操作之 Common Table Expression - 公共表表达式
+-- 参考资料：https://www.sqlservertutorial.net/sql-server-basics/sql-server-cte/
 -- 在 SQL Server 中，公共表表达式（Common Table Expression，简称 CTE）是一种临时结果集，用于存储查询中的中间结果。
 -- CTE 可以将复杂的查询分解为多个简单的步骤，从而提高代码的可读性和可维护性。
 

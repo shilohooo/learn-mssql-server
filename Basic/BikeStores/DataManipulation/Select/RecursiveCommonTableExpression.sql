@@ -1,4 +1,5 @@
 -- SQL Server 数据操作之 recursive CTE - 递归公共表表达式
+-- 参考资料：https://www.sqlservertutorial.net/sql-server-basics/sql-server-recursive-cte/
 -- 在 SQL Server 中，递归公共表表达式（Recursive Common Table Expression，简称 Recursive CTE）是一种特殊类型的 CTE，
 -- 用于处理具有层次结构或递归关系的数据。递归 CTE 可以帮助您遍历树形结构，例如组织结构、文件系统或评论嵌套等。
 -- 语法如下：
