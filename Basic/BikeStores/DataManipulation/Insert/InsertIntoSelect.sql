@@ -6,7 +6,7 @@
 -- query
 
 -- 上述语法中，query 语句返回的行将插入到 target_table 中
--- query 语句可以是任意有效的查询语句，它必须与返回 (column_list) 指定的列对应的数据
+-- query 语句可以是任意有效的查询语句，它必须返回与 (column_list) 指定的列对应的数据
 -- [ TOP ( expression ) [ PERCENT ] ] 子句是可选的，它可以限制要插入的数据行数
 -- 注意：应该始终将 TOP 子句和 Order by 子句一起使用
 
